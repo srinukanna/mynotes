@@ -1,0 +1,10 @@
+body{
+    background-image: url("images/kanna1.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:top ;
+    height: 1010px;
+
+    
+    width: 390px;
+}

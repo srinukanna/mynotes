@@ -1,0 +1,28 @@
+h1{
+    text-align: center;
+    color: aqua;
+}
+img{
+    height: 130px;
+    width: 130px;
+    object-position: center;
+}
+body{
+    background-color: burlywood;
+}
+.button1{
+    background-color: red;
+    color:azure;
+    border:0;
+    transition:height 2s,width 2s;
+    
+}
+.button1:hover{
+    background-color: rgb(17, 234, 140);
+    width: 200;
+    height:200;
+
+}
+
+
+
