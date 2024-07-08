@@ -1,10 +1,10 @@
  # Network:
- It is a collection of interconnected devices that communicate and share resources through globally.
+    It is a collection of interconnected devices that communicate and share resources through globally.
 
-  LAN,WAN,PAN etc., are networks.
+     LAN,WAN,PAN etc., are networks.
 
-### Devices:
-Computers,servers,printers etc.,
+ ### Devices:
+    Computers,Smartphones,Printers etc., are the devices.
      
  # Computer Network:
- It is a group of interconnected computers that communicate and share the resources in a network.
+    It is a group of interconnected computers that communicate and share the resources in a network.
