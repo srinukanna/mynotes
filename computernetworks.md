@@ -1,6 +1,4 @@
  # Network:
-
- 
  It is a collection of interconnected devices that communicate and share resources through globally.
 
   LAN,WAN,PAN etc., are networks.
