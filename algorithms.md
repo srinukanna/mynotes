@@ -28,4 +28,5 @@
     Algorithm must have only finite no of steps.
    
    #### 5.Effectively
+    Algorithm must be understand easily
    
