@@ -1,7 +1,7 @@
  # Network:
     It is a collection of interconnected devices that communicate and share resources through globally.
-
-     LAN,WAN,PAN etc., are networks.
+    
+    LAN,WAN,PAN etc., are networks.
 
  ### Devices:
     Computers,Smartphones,Printers etc., are the devices.
