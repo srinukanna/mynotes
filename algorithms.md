@@ -1,7 +1,7 @@
 # Definition:
     it is a step by step instruction to solve a computational problem.
 
-# Characteristics of an algrithm:
+# Characteristics of an algorithm:
     1.Input   
 
     2.Output
@@ -23,3 +23,9 @@
 
    #### 3.Definiteness:
     Algoritm must be unambigious. 
+
+   #### 4.Finiteness
+    Algorithm must have only finite no of steps.
+   
+   #### 5.Effectively
+   
