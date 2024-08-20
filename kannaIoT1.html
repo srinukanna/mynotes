@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart AC Monitoring and Control</title>
+    <link rel="stylesheet" href="./kannaIoT1.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>AC Monitoring and Control</h1>
+        </header>
+        <main>
+            <div class="sensor-data">
+                <div class="sensor">
+                    <h2>Dust Level</h2>
+                    <p id="dust-level">20%</p>
+                </div>
+                <div class="sensor">
+                    <h2>Humidity</h2>
+                    <p id="humidity-level">45%</p>
+                </div>
+                <div class="sensor">
+                    <h2>Temperature</h2>
+                    <p id="temperature-level">22°C</p>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="ac-on" onclick="controlAC('on')">Turn AC On</button>
+                <button id="ac-off" onclick="controlAC('off')">Turn AC Off</button>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Smart AC Solutions</p>
+        </footer>
+    </div>
+    <script src="./kannaIoT1.js"></script>
+</body>
+</html>
