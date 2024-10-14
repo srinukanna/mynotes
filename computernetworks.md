@@ -14,20 +14,27 @@
    * MAN (Metropolitean Area Network)
    * PAN (Personal Area Network)
    * WAN (Wide Area Network)
-   * WLAN (Wireless Local Area Network)
+   * CAN (Campus Area Network)
    * SAN (Storage Area Network)
 
 ### Local Area Network:
     Connect the devices within a small geographic area like home,office or school etc.,
 
    Ex: Computers,Printers and Servers in an office connected to a network to  share the resources.
-#### Categories in LAN:
-```
+ ### Categories in LAN:
+ ```
   1. Wired LAN (Using Ethernet Cable)
   2. Wireless LAN (Wi-Fi)
 ```
 
-#### Advantages:
+### Wired LAN:
+* The devices which are connected with the help of ethernet cable using the devices like switch,hub etc., for communicating within the network.
+
+### Wireless LAN:
+* The devices which are connected with the help of Wi-Fi for communicating within the network.
+
+### Advantages
+* High speed of data exchange
 
 
          
