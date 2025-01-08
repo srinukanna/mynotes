@@ -16,7 +16,7 @@
  * first create a new repository on git hub 
  * Then clone the repository using clone option
  * do the first commit using some message by clicking commit button
- * if u are a new user it will prompt you to give the username and user email with password
+ * if u are a new user it will prompt you to give the username and user email with password.
 
  #### Second Method :
 
@@ -26,16 +26,11 @@
 
   ``` 
     git init
-    git 
+    git remote add -origin
 ```
 
 
 
-
-
-
- 
- *** 
  ### Branches problems
 
  * sometimes if it says your main branch is behind u have to click branches option
