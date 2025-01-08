@@ -28,5 +28,46 @@
     Algorithm must have only finite no of steps.
    
    #### 5.Effectively
-    Algorithm must be understand easily
-   
+    Algorithm does not contain any unnecessary steps 
+
+ # Performance Analysis Of an algorithm:
+    It's nothing but how the performance of algorithm in during the implementation part.
+ 
+ We can analyse the algorithm in different views:
+ * Time Complexity
+ * Space Complexity
+
+ 
+
+ ### Time Complexity:
+  The rate of change of time while in execution of an algorithm with respect to change in inputs.
+
+ There are different types of time complexities:
+
+ * O(n)
+ * O(logn)
+ * O(n^2)
+ * O(nlogn)
+ * O(n^3)
+ * O(1) etc.,
+
+ #### O(1):
+ it is also known as "Linear Time complexity".
+
+    The execution time of an algorithm won't change irrespective any no of inputs.
+
+ #### O(n^2):
+ it is also known as "Quadratic Time Complexity".
+
+ ```
+   The execution time of an algorithm increases quadratically with respect to inputs.
+```
+#### O(logn):
+it is also known as "Logarithmic Time Complexity".
+
+```
+   The execution time of an algorithm decreases logarithmically with respect to change in the size of inputs.
+```
+
+
+  

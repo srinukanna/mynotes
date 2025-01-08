@@ -30,11 +30,18 @@
 ### Wired LAN:
 * The devices which are connected with the help of ethernet cable using the devices like switch,hub etc., for communicating within the network.
 
+ ![my image]/Users/kannasrinivasulu/dts/mynotes/A1DA0D68-3606-45F7-A070-194CBBE61889.jpeg
+
 ### Wireless LAN:
 * The devices which are connected with the help of Wi-Fi for communicating within the network.
 
 ### Advantages
 * High speed of data exchange
+* High security
+### Disadvantages
+* Range is low
+* 
+
 
 
          
