@@ -1,3 +1,0 @@
-# Datawarehouse Basics
- 
-hello
