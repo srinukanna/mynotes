@@ -18,6 +18,15 @@
  * do the first commit using some message by clicking commit button
  * if u are a new user it will prompt you to give the username and user email with password.
 
+ ```
+ git init
+ git add .
+ git commit -m 'filename'
+ git remote add origin
+ git push origin main
+
+ ```
+
  #### Second Method :
 
  * create a new repository in github ,the option is present in the navigation bar.
@@ -44,6 +53,21 @@
    git branch -M main
    git push origin main
 ```
+ Topics:
+ * Remote management
+ * Branches
+ * Merge conflicts
 
 
- 
+## Files management
+* traditional files  
+drawback:
+lost their files when they keep their files somewhere else 
+
+* virtual file management
+ex: mypc/cdrive/c++
+```
+[text](<../../DSA_TopicWise_Notes/8-Linked Lists/1-LinkedLists.pdf>)
+```
+* Drawbacks
+```
