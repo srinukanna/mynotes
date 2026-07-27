@@ -30,4 +30,32 @@ finalprice = price + gstamount;
 calculate gstamount and finalprice using the above formulas and taking required variables.
 
 ```
+* 7.
+```
+ take  three subjects and calculate their average using     below formula.
+ average = ((subject1 + subject2+ subject3))/3;
+ if the average is greater than 90 , print as grade a;
+ if the average is greater than 75 ,print as grade b
+ if the average is below 75 ,print grade c
+ if the average is 35 ,print as pass
+ using the required concept implement the above program.
+ ```
+
+* 8.
+ ```
+   print 1 to 10 numbers using for loop
+ ```
+
+* 9.
+ ```
+  if the student has degree and u need to check the condition that the person must have  experience 2 years or not then print as shortlisted,otherwise print as no sufficient experience. if he has no degree print as he has no degree let him go
+  ```
+
+* 10.
+```
+using accumulator print the sum  of fisrt 10 numbers
+
+```
+
+ 
 
