@@ -150,12 +150,12 @@ export default Body;
 
 ### useState()
 
-- This is the hook as a solution which is react utility function where it rerenders everytime when there is change in the variable and make essential updates to original dom and updating UI.
+- This is the hook as a solution which is react utility function where it rerenders everytime when there is change in the state variable and make essential updates to original dom and updating UI.
 
 
 - If the normal variable changes ,the ui wont change and react introduces powerful concept state management using useState()
 
-- The state variable when created using the useState, it gets updated using the second variable and rerender with updating the dom only with specific changes and commit to UI phase.
+- The state variable when created using the useState, it gets updated using the second variable(setter function) and rerender with updating the dom only with specific changes and commit to UI phase.
 
 - The useState is a utility function which returns an array of two variable one is for initialising and another one is for rerendering and updating the ui.
 
