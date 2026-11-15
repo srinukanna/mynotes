@@ -148,25 +148,27 @@ export default Body;
  In the two sample cards,when we use to filter them with a button using normal variable it cant update the ui even it is updated onclick which is in the button filter logic above.
 ```
 
-### useState()
+- #### useState() as Solution
 
-- This is the hook as a solution which is react utility function where it rerenders everytime when there is change in the state variable and make essential updates to original dom and updating UI.
+- This is the hook as a solution which is react utility function where it schedules a rerender when we update state using its setter and make essential updates to original dom and updating UI done by react.
 
-
-- If the normal variable changes ,the ui wont change and react introduces powerful concept state management using useState()
+- If a normal variable changes, that change alone does not tell React to rerender, so the UI won’t automatically update and react introduces powerful concept state management using useState()
 
 - The state variable when created using the useState, it gets updated using the second variable(setter function) and rerender with updating the dom only with specific changes and commit to UI phase.
 
-- The useState is a utility function which returns an array of two variable one is for initialising and another one is for rerendering and updating the ui.
+- The useState is a utility function which returns an array of two values: 
+```
+the current state value and a setter function for updating state and scheduling a rerender.
+```
 
 - While creating state variable we are doing actually array destructuring.
 
-- React is very efficient in dom manipulation with the help of react fiber.Hence it solves the above problem whenever the data changes it immediately change UI using Usestate.
+- React is very efficient in dom manipulation with the help of react fiber.Hence it solves the above problem when we update state using the setter, React renders again and applies the required DOM changes.
 
 ```
 React fiber introduced in react 16.
 ```
-
+ 
 #### Note:
 
 ```
@@ -185,21 +187,65 @@ import {useState} from "react"
 ```
 once check module.exports too
 ```
+#### useState() behind the scenes
 
-### React reconcilation
-
-- Like, after creating virtual dom compare with old virtual dom and update essential changes to real dom
-- The algorithm also known as React Reconcilation.
-
-### Render
+- one is state variable and another one is setter function
+  Ex:
 
 ```
- it is just creating a virtual dom whenever any update or state change done to the component.
+const [counter,setCounter]=useState(0);
 ```
 
-- After using react reconcilation update the UI.
+- Here counter is a state variable .
 
-### Lifecycle of React
+- setCounter queues a state update in React's internal memory (Fiber node) and schedules a rerender.
+
+- When the component runs again, useState reads that memory and initialize a brand new const variable with that memory(value) during rerender.
+
+- every state variable value is a snapshot.
+
+##### Breakthrough point
+
+```
+React preserves state between renders. Each render creates new const binding, containing that render’s state snapshot(final result during execution). Setters queue changes for a future render, they do not modify the current snapshot.
+```
+-> Internal memory in react fiber
+#### Batching
+
+- Grouping the state updates for scheduling the next render instead of multiple renders.
+
+```
+const [count,setCount] = useState(0);
+onclick ={
+  ()=>{
+  setCount(count+1); //(0+1) => 1 // update into a queue
+  setCount(count+1); //(0+1) => 1 // update into a queue
+  setCount(count+1); //(0+1) => 1 // update into a queue
+}}
+[1,1,1]->1 final replaced value
+Grouped as batch and single render for two ways
+onclick ={
+  ()=>{
+  setCount(prev=>prev+1); //(prev=>prev+1) =>  // update into a queue
+  setCount(prev=>prev+1); //(prev=>prev+1)  // update into a queue
+  setCount(prev=>prev+1); //(prev=>prev+1)  // update into a queue
+}}
+[prev=>prev+1,prev=>prev+1,prev=>prev+1]=>[1,2,3]
+```
+
+- Now all values which are in queue and they update the value one by one by replacing after executing every line in a loop while iterating queue.
+
+- The setters queue updates during the event handler execution. 
+
+- During the next render, React processes those updates in order to calculate the next state. 
+
+- Replacement values replace the pending state,updater functions calculate a new pending state.
+
+- Atlast, final replaced value assign to new const variable which is created during single rerender.
+
+- constant values directly replaced, where updater functions executed while iterating.
+
+- After that replace the previous values and assiging to new constant variable by single render.
 
 ##### Triggering a Render
 
@@ -235,7 +281,7 @@ React takes the newly generated Virtual DOM tree and compares it against the pre
 • Finding Differences.
 
 ```
- Using its Reconciliation (or diffing) algorithm, React identifies the exact minimum number of changes needed to bring the UI up to date.
+ Using its Reconciliation (or diffing) algorithm, React identifies the changes needed to bring the UI up to date.
 ```
 
 ##### The Commit Phase (Updating the Real UI)
@@ -251,3 +297,7 @@ Once React knows what changed, it enters the Commit Phase and applies only those
 ```
  After React updates the real DOM, the browser repaints the screen so the user sees the new UI.
 ```
+
+* Once see episode 1 for more clarity.
+
+* React Fiber Architecture is introduced in react 16 and which is very fast for dom manipulation using react diff algorithm.
