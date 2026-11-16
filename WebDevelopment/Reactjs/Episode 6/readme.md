@@ -160,11 +160,47 @@ we always used hardcode data in the application
 #### Method - 2 
 - we need to safely use "https://proxy.corsfix.com/" before the url of swiggy api.
 
-* Removing mock data restaurant which is imported from mockdata.js under utils folder and initialise with empty array in useState.
+### async await
+* we used async function to fetch the data using await keyword instead of using traditional promises .then .catch or try-catch.
 
-* After making an api call while rendering the componnet we will get the data to page.
+* After making an api call while rendering the component we will get the data to page.
+
+* Here,the function is wrapped in the useEffect as a side effect.
+
 
 ### Real flow using an empty state 
-* Initially page will be empty
-* Next,after making an api call,it will sends the data to web page.
+* Initially page will be empty when the body is rendered
+* Next,after making an api call,it will sends the data to web page and the body again rendered.
 * Now the restaurant cards will appeared on the webpage.
+
+### Good Practices
+* Optional Chaining
+```
+setRestaurant(json?.data?.cards[4]?.card?.card?.infowithStyle.restaurants)
+It gives an empty array instead of null or undefined.
+```
+* Cleaning mock data 
+```
+Removing mock data of restaurant which is imported from mockdata.js under utils folder and initialise with empty array in useState.
+```
+* Use only swiggy api where we get live data instead of using mockdata.
+
+#### Part-4
+* Intially body is empty while rendering before making an api call.
+* Instead of showing empty beforing making an api call and loading data to the webpage we need to some optimization for user experience.
+
+### Method - 1
+*  loading text on screen before the api call
+like,
+```
+if(restaurants.length === 0){
+  return <h1> Loading </h1>
+}
+```
+* But it is not a good way to show loading text on screen or spinner before rendering the data on to the page.
+
+### Good Industry Practice
+#### Shimmer UI
+* It is the skeleton of actual UI, where user can simply a assume real ui before the real data rendering on to the webpage instead of boring loading screen
+
+* Simply we load the fake page until we get the api data to the webpage.
