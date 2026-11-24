@@ -338,6 +338,7 @@ const Body = () =>{
 export default Body;
 ```
 ### Good Practice
+
 * Optional Chaining
 ```
 if (!resData?.info) return null;
