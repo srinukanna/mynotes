@@ -343,7 +343,7 @@ export default Body;
 ```
 if (!resData?.info) return null;
 safely stop without returning error instead of undefined with error
-const {cloudinaryImageId,name,avgRating,sla,cuisines,areaName} =resData.info;
+const {cloudinaryImageId,name,avgRating,sla,cuisines,areaName} =resData?.info;
 
 ```
 - Here most of the members use index as key which is given by js in the map but it is not a good practice.
